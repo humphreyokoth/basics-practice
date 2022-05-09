@@ -41,26 +41,51 @@
 // let x = ~ 5
 // console.log(x);
 
-function myFunction(){
-    const message ="alert";
-    message.innerHTML="hello";
-    let x = "";
-    try{
-        if(x=="")throw"empty";{
-        if(isNaN(x))throw "not a number";
-        x = Number(x);
-        if(x<5) throw "too low";
-        if(x<10) throw "too high";    
+// function myFunction(){
+//     const message ="alert";
+//     message.innerHTML="hello";
+//     let x = "";
+//     try{
+//         if(x=="")throw"empty";{
+//         if(isNaN(x))throw "not a number";
+//         x = Number(x);
+//         if(x<5) throw "too low";
+//         if(x<10) throw "too high";    
 
 
-        }
+//         }
         
-    }
-    catch(err) {
-           message.innerHTML = "input is"+err;
-    }
+//     }
+//     catch(err) {
+//            message.innerHTML = "input is"+err;
+//     }
   
   
+// }
+// const person = {
+//     firstName:"John",
+//     lastName:"Doe",
+
+//     fullName:function(){
+//         return this.firstName + " " + this.lastName;
+//     }
+// };
+
+
+
+// console.log(person.fullName());
+
+class Animal {
+
+    constructor(name,type){
+        this.name = name;
+        this.type = type;
+    }
+    livingthings(live){
+        return  live + this.type;
+    }
 }
 
-myFunction()
+let myPet = new Animal("Dog","Pet animal");
+
+console.log(myPet)
