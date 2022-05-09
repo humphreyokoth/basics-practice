@@ -1,4 +1,4 @@
-// const fruits = ["banana","orange","apple"]
+ //const fruits = ["banana","orange","apple"]
 
 // //fruits.push ("lemon")
 
@@ -23,5 +23,44 @@
 //   points[i] = points[j]
 //   points[j] = k
 // }
-let x = Math.round(9.5)
-console.log(x)
+// let x = Math.round(9.5)
+// console.log(x)
+
+
+
+// const fruits = new Map([
+//     ["apples", 500],
+//     ["bananas", 300],
+//     ["oranges", 200]
+//   ]);
+  
+// let text = "";
+// for(const i of fruits.entries()){
+// text+=i;
+// }
+// let x = ~ 5
+// console.log(x);
+
+function myFunction(){
+    const message ="alert";
+    message.innerHTML="hello";
+    let x = "";
+    try{
+        if(x=="")throw"empty";{
+        if(isNaN(x))throw "not a number";
+        x = Number(x);
+        if(x<5) throw "too low";
+        if(x<10) throw "too high";    
+
+
+        }
+        
+    }
+    catch(err) {
+           message.innerHTML = "input is"+err;
+    }
+  
+  
+}
+
+myFunction()
