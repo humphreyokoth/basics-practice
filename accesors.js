@@ -7,4 +7,19 @@ Object.defineProperty(obj,"reset",{
     }
 })
 obj.reset;
-console.log(obj.counter);
+//console.log(obj.counter);
+
+// ITERABLES
+function myNumbers(){
+
+    let n = 0;
+    return{
+        next:function(){
+            n+=10
+            return {value:n, done:false};
+        }
+    };
+}
+
+const n = myNumbers();
+console.log(n.next().value);
