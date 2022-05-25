@@ -29,7 +29,22 @@ tick(){
         seconds:state.seconds +1
     }));
 }
+
+componentDidMount(){
+    this.interval = setInterval(()=> this.tick(),1000);
+}
+
+componentWillMount(){
+    clearInterval(this.interval);
+}
+
+render(){
+    return (
+        <div>
+            Seconds:{this.state.seconds}
+        </div>
+    );
+}
+
 };
-// componentDidMount(){
-//     this.interval = setInterval(()=> this.tick(),1000);
-// };
+root.render(<Timer/>);
