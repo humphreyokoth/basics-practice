@@ -20,8 +20,7 @@ root.render(<HelloMessage name ="Taylor"/>);
  */
 
 class Timer extends React.Component{
-
-    constructor(props){
+ constructor(props){
 super(props);
 this.state = {seconds:0};
 }
@@ -30,7 +29,7 @@ tick(){
         seconds:state.seconds +1
     }));
 }
-}
-componentDidMount(){
-    this.interval = setInterval(()=> this.tick(),1000);
-}
+};
+// componentDidMount(){
+//     this.interval = setInterval(()=> this.tick(),1000);
+// };
