@@ -44,3 +44,21 @@ this.setState(state =>({
 }
 }
 
+
+class TodoList extends React.Component{
+    return(){
+        return(
+    
+            <ul>
+                {this.props.items.map(item =>(
+                    <li key={item.id}>{item.text}</li>
+                ))}
+            </ul>
+    
+        );
+    }
+    
+    
+    }
+ root.render(<TodoApp/>)
+    
