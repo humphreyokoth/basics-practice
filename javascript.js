@@ -88,7 +88,7 @@ class Animal {
 
 let myPet = new Animal("Dog","Pet animal");
 
-//console.log(myPet)
+console.log(myPet)
 
 const add = (function(){
 let counter  = 0;
