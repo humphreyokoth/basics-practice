@@ -32,17 +32,16 @@
 // }
 
 let arr = [1, 3, 5, 7, 9];
-
+            // 1=3+5+7+9=24
+            // 3=1+5+7+9=22
+            // 5=1+3+7+9=20
+            // 7=1+3+5+9=18
+            // 9=1+3+5+7=16
 function minMaxSum(arr) {
-  // Reduce Function of  adding accumulator and current value.
-  // acc = 1,curr=3 => acc = 4
-  //acc = 4, curr =5 => acc = 9
-  // acc = 9, curr =7 =>acc = 16,
-  //acc = 16,curr = 9 ,=> acc = 24
+  // Reduce Function of to help to get sums of four of the five integers.
   const  sum = arr.reduce((acc, curr) => acc + curr);
-  // 1,3       1+3 = 4
   //console.log(sum)
-
+  // Minimum
   const min = sum - Math.max(...arr); //1 3 5 7 9 
   //console.log(...arr)
   const max = sum - Math.min(...arr);
@@ -50,6 +49,8 @@ function minMaxSum(arr) {
 //   console.log(`Minimum number is ${min}`);
 //   console.log(`Maximum number is ${max}`);
 }
+// Memoization - saving and reusing previously computed
+// values of a function rather than recomputing them
 
 minMaxSum(arr);
 
