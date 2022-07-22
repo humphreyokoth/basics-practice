@@ -54,4 +54,4 @@ function camelcase(str) {
     return count;
 }
 //console.log(camelcase(str));
-//camelcase(str)
+camelcase(str)
