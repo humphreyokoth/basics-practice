@@ -2,7 +2,7 @@
 //Makes the function that takes a long time to run much faster after one execution.
 
 function addTo80(n){
-    console.log("long time....")
+    //console.log("long time....")
     return n+80
 }
 addTo80(5)
@@ -35,4 +35,4 @@ console.log("3", memoized(5))
 
 console.log("4", memoized(5))
 
-console.log("5", memoized(5))
+console.log("5", memoized(10))
