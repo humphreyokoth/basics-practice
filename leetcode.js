@@ -44,3 +44,44 @@ var lengthOfLongestSubstring = function(s) {
     }
     return max
 };
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLongestSubstring = function(s) {
+    let max = 0;
+    let begin = 0;
+    let map = {};
+  
+    for (let end = 0; end < s.length; end++) {
+      console.log("Current Character:", s[end]);
+      console.log("Current Substring:", s.slice(begin, end + 1));
+  
+      if (map[s[end]] !== undefined && map[s[end]] >= begin) {
+        console.log(
+          "Repeating Character Found:",
+          s[end],
+          "at index",
+          end,
+          "within the current substring"
+        );
+        begin = map[s[end]] + 1;
+        console.log("New Begin Index:", begin);
+      }
+  
+      map[s[end]] = end;
+      max = Math.max(max, end - begin + 1);
+  
+      console.log("Current Max Length:", max);
+      console.log("-----------------");
+    }
+  
+    return max;
+  };
+  
+  // Example usage:
+  const input = "abcabcbb";
+  const results = lengthOfLongestSubstring(input);
+  console.log("Result:", results);
+  
